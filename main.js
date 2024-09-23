@@ -20,8 +20,9 @@ document.getElementById('btn-verificar').addEventListener('click',() => {
 
     console.log(arreglo.join(''));
     console.log(arregloReverso.join(''));
-    
-    if (arreglo.join('').toLowerCase() == arregloReverso.join('').toLowerCase()) {
+    if (arreglo.join('').length == 0) {
+        Swal.fire("Porfavor ingrese algo en el input");
+    } else if (arreglo.join('').toLowerCase() == arregloReverso.join('').toLowerCase()) {
         Swal.fire("Es un palindromo");
     } else {
         Swal.fire("NO es un palindromo");
